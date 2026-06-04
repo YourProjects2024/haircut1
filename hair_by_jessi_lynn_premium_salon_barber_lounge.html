@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair by Jessi Lynn | Premium Barber, Colorist & Hair Restoration</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Configuration for Custom Theme Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        plum: {
+                            50: '#FBEAF0',
+                            100: '#F7D4E1',
+                            500: '#993556',
+                            600: '#832A46',
+                            700: '#72243E',
+                            900: '#461323',
+                            950: '#2A0612',
+                        },
+                        champagne: {
+                            50: '#FAF6F0',
+                            100: '#F3EAD8',
+                            200: '#E8D4B3',
+                            500: '#D0AF7B',
+                            600: '#B8935C',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for gradients, animations and specific styles -->
+    <style>
+        .premium-blur {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #993556 0%, #D0AF7B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-gradient-gold {
+            background: linear-gradient(135deg, #FBEAF0 0%, #F3EAD8 100%);
+        }
+        .bg-gradient-dark {
+            background: linear-gradient(135deg, #2A0612 0%, #461323 100%);
+        }
+        /* Custom scrollbar to match luxury theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF6F0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #993556;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #72243E;
+        }
+    </style>
+</head>
+<body class="font-sans bg-champagne-50 text-slate-800 antialiased overflow-x-hidden">
+
+    <!-- Sticky Navigation Bar with Luxury Glassmorphism -->
+    <header class="sticky top-0 z-50 bg-white/90 premium-blur border-b border-plum-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex flex-col group">
+                    <span class="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-plum-950 group-hover:text-plum-500 transition-colors duration-200">
+                        Hair by <span class="text-plum-500 italic">Jessi Lynn</span>
+                    </span>
+                    <span class="text-[10px] uppercase tracking-[0.25em] text-champagne-600 font-semibold -mt-1">Barber & Stylist Lounge</span>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex space-x-8 lg:space-x-10">
+                    <a href="#about" class="text-sm font-semibold text-slate-600 hover:text-plum-500 transition-colors duration-200">About</a>
+                    <a href="#services" class="text-sm font-semibold text-slate-600 hover:text-plum-500 transition-colors duration-200">Services</a>
+                    <a href="#gallery" class="text-sm font-semibold text-slate-600 hover:text-plum-500 transition-colors duration-200">Gallery</a>
+                    <a href="#reviews" class="text-sm font-semibold text-slate-600 hover:text-plum-500 transition-colors duration-200">Reviews</a>
+                    <a href="#contact" class="text-sm font-semibold text-slate-600 hover:text-plum-500 transition-colors duration-200">Contact & Hours</a>
+                </nav>
+
+                <!-- Navigation Actions -->
+                <div class="hidden sm:flex items-center space-x-4">
+                    <a href="tel:+15803725411" class="text-xs lg:text-sm font-bold text-plum-600 hover:text-plum-700 flex items-center gap-1.5 transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        (580) 372-5411
+                    </a>
+                    <a href="#book" class="bg-gradient-to-r from-plum-600 to-plum-700 text-white font-semibold text-sm px-6 py-3 rounded-full hover:from-plum-700 hover:to-plum-900 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-250">
+                        Book Appointment
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center space-x-2">
+                    <a href="tel:+15803725411" class="p-2 text-plum-600 hover:bg-plum-50 rounded-full transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    </a>
+                    <button id="mobile-menu-btn" type="button" class="text-slate-700 hover:text-plum-500 focus:outline-none p-2 rounded-lg" aria-label="Toggle menu">
+                        <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-plum-100 transition-all duration-300">
+            <div class="px-4 pt-2 pb-6 space-y-3">
+                <a href="#about" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-plum-50 hover:text-plum-600">About Jessi</a>
+                <a href="#services" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-plum-50 hover:text-plum-600">Services & Pricing</a>
+                <a href="#gallery" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-plum-50 hover:text-plum-600">Transformations Gallery</a>
+                <a href="#reviews" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-plum-50 hover:text-plum-600">Reviews</a>
+                <a href="#contact" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-700 hover:bg-plum-50 hover:text-plum-600">Contact & Hours</a>
+                <div class="pt-4 border-t border-slate-100 flex flex-col gap-3">
+                    <a href="#book" class="w-full text-center bg-plum-600 text-white font-semibold py-3 rounded-xl hover:bg-plum-700 transition-colors">
+                        Book Appointment
+                    </a>
+                    <a href="tel:+15803725411" class="w-full text-center bg-champagne-50 border border-champagne-200 text-plum-700 font-semibold py-3 rounded-xl flex items-center justify-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        Call (580) 372-5411
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-gold overflow-hidden py-16 sm:py-24 lg:py-32">
+        <!-- Floating elegant decorative elements -->
+        <div class="absolute inset-0 z-0 opacity-40">
+            <div class="absolute top-10 right-10 w-96 h-96 rounded-full bg-plum-100 filter blur-3xl"></div>
+            <div class="absolute bottom-10 left-10 w-80 h-80 rounded-full bg-champagne-200 filter blur-2xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <!-- Hero Text Left -->
+                <div class="lg:col-span-7 flex flex-col justify-center text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-plum-50 border border-plum-100 text-plum-700 text-xs sm:text-sm font-bold px-4 py-2 rounded-full w-fit mx-auto lg:mx-0 shadow-sm animate-pulse mb-6">
+                        <span class="text-base">💈</span> Chickasha, Oklahoma &middot; J Danielle Salon
+                    </div>
+                    
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-plum-950 leading-tight sm:leading-none">
+                        Your hair, <br class="hidden sm:inline">
+                        <span class="text-gradient italic">your confidence.</span>
+                    </h1>
+                    
+                    <p class="mt-6 text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Experience premier custom barbering, advanced color solutions, hot towel shaves, and revolutionary <strong class="text-plum-900 font-semibold">Hairskeen Hair Replacement</strong> designed to look completely natural and restore your ultimate style.
+                    </p>
+
+                    <!-- Google Reviews Badge -->
+                    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <div class="flex items-center gap-1 bg-white px-4 py-2 rounded-xl shadow-sm border border-champagne-200">
+                            <span class="text-amber-400 font-bold text-lg">★</span>
+                            <span class="text-amber-400 font-bold text-lg">★</span>
+                            <span class="text-amber-400 font-bold text-lg">★</span>
+                            <span class="text-amber-400 font-bold text-lg">★</span>
+                            <span class="text-amber-400 font-bold text-lg">★</span>
+                            <span class="ml-2 font-bold text-slate-800 text-sm">5.0 Rating</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-500">Based on exceptional Google client reviews</p>
+                    </div>
+
+                    <!-- Call to Action Buttons -->
+                    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#book" class="w-full sm:w-auto text-center bg-gradient-to-r from-plum-600 to-plum-700 text-white font-bold text-base px-8 py-4 rounded-full hover:from-plum-700 hover:to-plum-900 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
+                            Request Appointment
+                        </a>
+                        <a href="#services" class="w-full sm:w-auto text-center bg-white text-plum-700 border-2 border-plum-500 font-bold text-base px-8 py-4 rounded-full hover:bg-plum-50 transition-all duration-200">
+                            Explore Services
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic Right -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm sm:max-w-md">
+                        <!-- Background glow frame -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-plum-500 to-champagne-500 rounded-3xl rotate-3 scale-105 opacity-20 blur-sm"></div>
+                        
+                        <!-- Main Card -->
+                        <div class="relative bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-champagne-100 overflow-hidden">
+                            <!-- Inner decorative border -->
+                            <div class="absolute inset-4 border border-dashed border-champagne-200 rounded-2xl pointer-events-none"></div>
+                            
+                            <!-- Content -->
+                            <div class="relative flex flex-col items-center pb-6">
+                                <!-- Barber Shop Lifestyle Header Image -->
+                                <div class="w-full h-40 rounded-2xl overflow-hidden mb-6 relative shadow-md">
+                                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80" alt="Premium Barber Shop Interior" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-plum-950/70 to-transparent"></div>
+                                    <div class="absolute bottom-3 left-3 flex items-center gap-1.5 bg-plum-600/90 premium-blur text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
+                                        <span>💈</span> J Danielle Salon
+                                    </div>
+                                </div>
+                                
+                                <span class="text-xs uppercase tracking-widest text-champagne-600 font-bold mb-1">Meet the Artist</span>
+                                <h2 class="font-serif text-3xl font-bold text-plum-950">Jessi Lynn</h2>
+                                <p class="text-sm text-plum-600 font-medium italic mt-1">Licensed Barber & Master Hair Stylist</p>
+                                
+                                <div class="w-full border-t border-dashed border-champagne-200 my-6"></div>
+                                
+                                <ul class="space-y-3.5 text-slate-700 text-sm text-left w-full px-2 sm:px-4">
+                                    <li class="flex items-center gap-3">
+                                        <span class="text-plum-500 text-lg">✂</span>
+                                        <span>Precision Cuts & High Fades</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <span class="text-plum-500 text-lg">🪒</span>
+                                        <span>Traditional Hot Towel Straight Razor Shaves</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <span class="text-plum-500 text-lg">✨</span>
+                                        <span>Certified Hairskeen Specialist</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <span class="text-plum-500 text-lg">🎨</span>
+                                        <span>Balayage, Color Melt & Highlights</span>
+                                    </li>
+                                </ul>
+
+                                <a href="#about" class="mt-8 text-xs font-bold text-plum-700 hover:text-plum-900 flex items-center gap-1 group">
+                                    Learn More About Jessi
+                                    <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Statistics Bar -->
+    <div class="bg-white border-y border-champagne-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-champagne-200 text-center">
+                <div class="flex flex-col items-center justify-center p-2">
+                    <span class="font-serif text-4xl font-extrabold text-plum-950">5.0 ★</span>
+                    <span class="text-sm uppercase tracking-wider text-slate-500 mt-2 font-medium">Google Rating</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-2 pt-6 md:pt-2">
+                    <span class="font-serif text-4xl font-extrabold text-plum-950">1.9K+</span>
+                    <span class="text-sm uppercase tracking-wider text-slate-500 mt-2 font-medium">Facebook Community</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-2 pt-6 md:pt-2">
+                    <span class="font-serif text-xl sm:text-2xl font-bold text-plum-950">Wade Gordon</span>
+                    <span class="text-xs sm:text-sm uppercase tracking-wider text-slate-500 mt-2 font-medium">Academy Certified Expert</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Jessi & Philosophy Section (Referencing cover image details) -->
+    <section id="about" class="py-20 sm:py-28 bg-champagne-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                
+                <!-- Left: Aesthetic Framing of her cover image background details -->
+                <div class="lg:col-span-5 order-2 lg:order-1">
+                    <div class="relative">
+                        <!-- Decorative Frame -->
+                        <div class="absolute -top-4 -left-4 w-full h-full border-2 border-dashed border-plum-500/20 rounded-2xl pointer-events-none"></div>
+                        
+                        <!-- Profile Card -->
+                        <div class="relative bg-white rounded-2xl p-6 sm:p-8 shadow-xl border border-plum-100 overflow-hidden">
+                            <h3 class="text-xs uppercase tracking-wider text-champagne-600 font-bold mb-4">Official Facebook Portfolio Snapshot</h3>
+                            
+                            <!-- Displaying the cover image metadata visually with gorgeous styling -->
+                            <div class="rounded-xl overflow-hidden shadow-md border border-slate-100 mb-6 group cursor-pointer relative">
+                                <img src="image_22b85f.png" alt="Jessi Lynn Facebook Profile Overview" class="w-full h-auto transition-transform duration-500 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/600x400/993556/ffffff?text=Jessi+Lynn+Profile'">
+                                <div class="absolute inset-0 bg-plum-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <span class="bg-white/90 text-plum-950 text-xs font-bold px-4 py-2 rounded-full shadow">View Profile Bio</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Key facts pulled dynamically from her profile banner screenshot image_22b85f.png -->
+                            <div class="space-y-4">
+                                <div class="flex items-start gap-3">
+                                    <div class="p-2 bg-plum-50 rounded-lg text-plum-600 text-lg">🎓</div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm">Wade Gordon Hairdressing Academy OKC</h4>
+                                        <p class="text-xs text-slate-500">Professional licensing & mastery of hair sculpting and color science</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="p-2 bg-plum-50 rounded-lg text-plum-600 text-lg">💈</div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm">J Danielle Salon and Color Studio</h4>
+                                        <p class="text-xs text-slate-500">Premium modern studio located at 2721 Ponderosa Dr, Chickasha</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="p-2 bg-plum-50 rounded-lg text-plum-600 text-lg">💡</div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-800 text-sm">Community-Centric Specialist</h4>
+                                        <p class="text-xs text-slate-500">Supporting Chickasha High School and local Oklahoma communities</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Text & Spiritual Philosophy Quote -->
+                <div class="lg:col-span-7 order-1 lg:order-2">
+                    <span class="text-xs uppercase tracking-[0.25em] text-plum-600 font-bold">Behind the Shear</span>
+                    <h2 class="font-serif text-3.5xl sm:text-4xl lg:text-5xl font-bold text-plum-950 tracking-tight mt-2">
+                        Meet Jessi Lynn Rushing
+                    </h2>
+                    <p class="mt-6 text-slate-600 leading-relaxed text-base sm:text-lg">
+                        Jessi Lynn Rushing is an accomplished master barber, expert colorist, and non-surgical hair restoration certified specialist. Practicing her art at the highly sought-after <strong class="text-plum-950">J Danielle Salon & Color Studio</strong>, Jessi blends traditional Barbering precision with state-of-the-art modern styling methodologies.
+                    </p>
+                    <p class="mt-4 text-slate-600 leading-relaxed text-base">
+                        Whether you are coming in for a fresh fade, an advanced multi-tone coloring session, customized premium volume extensions, or exploring the hair-restoring magic of <strong class="text-plum-900 font-semibold">Hairskeen</strong>, Jessi works with you one-on-one to create a tailor-made style that radiates authentic personal power and self-assurance.
+                    </p>
+
+                    <!-- Quote Block directly reflecting cover text "There is power in prayer" in image_22b85f.png -->
+                    <div class="mt-8 border-l-4 border-plum-500 bg-white p-6 rounded-r-2xl shadow-sm border border-slate-100">
+                        <p class="font-serif italic text-lg text-plum-950 leading-relaxed">
+                            "There is power in prayer."
+                        </p>
+                        <span class="block text-xs font-bold text-champagne-600 uppercase tracking-widest mt-2">&mdash; Jessi Lynn's Life & Studio Philosophy</span>
+                    </div>
+
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="https://www.facebook.com/jessi.tollett" target="_blank" class="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 hover:bg-blue-100 text-blue-800 font-semibold text-xs px-5 py-3 rounded-full shadow-sm transition-colors duration-200">
+                            <!-- Facebook Icon -->
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                            Connect on Facebook
+                        </a>
+                        <a href="#services" class="inline-flex items-center gap-1.5 text-xs font-bold text-plum-700 hover:text-plum-900 underline transition-colors">
+                            Explore Jessi's Custom Services &rarr;
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Services Section with Live Filter Tabs -->
+    <section id="services" class="py-20 sm:py-28 bg-white border-y border-champagne-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="text-xs uppercase tracking-[0.2em] text-plum-600 font-bold">Premium Menu</span>
+                <h2 class="font-serif text-3.5xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mt-2">Tailored Services & Experience</h2>
+                <p class="mt-4 text-slate-600 text-base">Explore top-tier barber techniques, professional color formulas, and clinical non-surgical Hairskeen solutions tailored precisely to your unique hair profile.</p>
+            </div>
+
+            <!-- Tab Filter Buttons -->
+            <div class="mt-12 flex justify-center">
+                <div class="inline-flex flex-wrap items-center justify-center gap-2 bg-champagne-50 p-2.5 rounded-2xl border border-champagne-200 shadow-inner">
+                    <button onclick="filterServices('all')" id="tab-all" class="service-tab-btn active px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-200 bg-plum-600 text-white shadow-sm">
+                        All Services
+                    </button>
+                    <button onclick="filterServices('barber')" id="tab-barber" class="service-tab-btn px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-200 text-slate-600 hover:text-plum-600">
+                        💈 Barbering & Shaves
+                    </button>
+                    <button onclick="filterServices('color')" id="tab-color" class="service-tab-btn px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-200 text-slate-600 hover:text-plum-600">
+                        🎨 Color & Style
+                    </button>
+                    <button onclick="filterServices('restoration')" id="tab-restoration" class="service-tab-btn px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-200 text-slate-600 hover:text-plum-600">
+                        💫 Hairskeen & Extensions
+                    </button>
+                </div>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Men's Cut -->
+                <div class="service-card-item barber bg-champagne-50 rounded-2xl overflow-hidden border border-champagne-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <!-- High Quality Hair Style Image -->
+                        <div class="w-full h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=600&q=80" alt="Men's Precision Cut & Fade" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 left-3 w-10 h-10 rounded-xl bg-plum-600/90 premium-blur flex items-center justify-center text-lg shadow-md text-white">✂</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-2">
+                                <h3 class="font-serif text-xl font-bold text-plum-950 leading-tight">Men's Precision Cut</h3>
+                                <span class="font-bold text-plum-600 text-sm whitespace-nowrap">Consult</span>
+                            </div>
+                            <p class="mt-3 text-slate-600 text-sm leading-relaxed">Precision custom fades, tapers, slick-backs, texturizing, and high-impact classic styles sculpted cleanly to enhance natural head shapes.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="pt-4 border-t border-dashed border-champagne-200 flex items-center justify-between">
+                            <span class="text-xs text-champagne-600 uppercase font-bold tracking-wider">Estimated Time: 30-45 mins</span>
+                            <a href="#book" class="text-xs font-bold text-plum-600 hover:text-plum-800 flex items-center gap-0.5">Book Now &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Hot Towel Shave -->
+                <div class="service-card-item barber bg-champagne-50 rounded-2xl overflow-hidden border border-champagne-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <!-- High Quality Shave Image -->
+                        <div class="w-full h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1599351431247-f509408793cd?auto=format&fit=crop&w=600&q=80" alt="Traditional Straight Razor Shave" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 left-3 w-10 h-10 rounded-xl bg-plum-600/90 premium-blur flex items-center justify-center text-lg shadow-md text-white">🪒</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-2">
+                                <h3 class="font-serif text-xl font-bold text-plum-950 leading-tight">Traditional Hot Shave</h3>
+                                <span class="font-bold text-plum-600 text-sm whitespace-nowrap">Consult</span>
+                            </div>
+                            <p class="mt-3 text-slate-600 text-sm leading-relaxed">Relaxing hot-towel steam therapy combined with natural pre-shave oils and an ultra-close, single blade straight razor sweep for absolute luxury.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="pt-4 border-t border-dashed border-champagne-200 flex items-center justify-between">
+                            <span class="text-xs text-champagne-600 uppercase font-bold tracking-wider">Estimated Time: 30 mins</span>
+                            <a href="#book" class="text-xs font-bold text-plum-600 hover:text-plum-800 flex items-center gap-0.5">Book Now &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Color & Highlights -->
+                <div class="service-card-item color bg-champagne-50 rounded-2xl overflow-hidden border border-champagne-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <!-- High Quality Color Treatment Image -->
+                        <div class="w-full h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&q=80" alt="Master Color & Highlights" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 left-3 w-10 h-10 rounded-xl bg-plum-600/90 premium-blur flex items-center justify-center text-lg shadow-md text-white">🎨</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-2">
+                                <h3 class="font-serif text-xl font-bold text-plum-950 leading-tight">Color & Highlights</h3>
+                                <span class="font-bold text-plum-600 text-sm whitespace-nowrap">Consult</span>
+                            </div>
+                            <p class="mt-3 text-slate-600 text-sm leading-relaxed">Balayage, foil baby-lights, master-level root touchups, and artistic glossing formulas that create dimensionality and radiant root health.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="pt-4 border-t border-dashed border-champagne-200 flex items-center justify-between">
+                            <span class="text-xs text-champagne-600 uppercase font-bold tracking-wider">Estimated Time: 2-3 hours</span>
+                            <a href="#book" class="text-xs font-bold text-plum-600 hover:text-plum-800 flex items-center gap-0.5">Book Now &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Hairskeen Replacement -->
+                <div class="service-card-item restoration bg-champagne-50 rounded-2xl overflow-hidden border border-champagne-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <!-- High Quality Restoration Close-Up -->
+                        <div class="w-full h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1605497746444-ac9dbd340b86?auto=format&fit=crop&w=600&q=80" alt="Non-Surgical Hair Replacement" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 left-3 w-10 h-10 rounded-xl bg-plum-600/90 premium-blur flex items-center justify-center text-lg shadow-md text-white">💫</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-2">
+                                <h3 class="font-serif text-xl font-bold text-plum-950 leading-tight">Hairskeen Hair System</h3>
+                                <span class="font-bold text-plum-600 text-sm whitespace-nowrap">Consult</span>
+                            </div>
+                            <p class="mt-3 text-slate-600 text-sm leading-relaxed">Certified non-surgical advanced hair restoration. Fully customized breathable skin-base systems styled to give you an incredibly dense, natural scalp appearance.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="pt-4 border-t border-dashed border-champagne-200 flex items-center justify-between">
+                            <span class="text-xs text-champagne-600 uppercase font-bold tracking-wider">Estimated Time: Consultation Req.</span>
+                            <a href="#book" class="text-xs font-bold text-plum-600 hover:text-plum-800 flex items-center gap-0.5">Book Now &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Hair Extensions -->
+                <div class="service-card-item restoration bg-champagne-50 rounded-2xl overflow-hidden border border-champagne-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <!-- High Quality Extensions / Long Hair Styling -->
+                        <div class="w-full h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Premium Hair Extensions Detail" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 left-3 w-10 h-10 rounded-xl bg-plum-600/90 premium-blur flex items-center justify-center text-lg shadow-md text-white">💆</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-2">
+                                <h3 class="font-serif text-xl font-bold text-plum-950 leading-tight">Premium Extensions</h3>
+                                <span class="font-bold text-plum-600 text-sm whitespace-nowrap">Consult</span>
+                            </div>
+                            <p class="mt-3 text-slate-600 text-sm leading-relaxed">Add ultimate density, fullness, and head-turning length. Custom-matched premium strands fused seamlessly to flow beautifully with natural movement.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="pt-4 border-t border-dashed border-champagne-200 flex items-center justify-between">
+                            <span class="text-xs text-champagne-600 uppercase font-bold tracking-wider">Estimated Time: 1.5 - 2 hours</span>
+                            <a href="#book" class="text-xs font-bold text-plum-600 hover:text-plum-800 flex items-center gap-0.5">Book Now &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Women's Signature Style -->
+                <div class="service-card-item color bg-champagne-50 rounded-2xl overflow-hidden border border-champagne-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <!-- High Quality Women's Cut / Blowout -->
+                        <div class="w-full h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=600&q=80" alt="Women's Signature Blowout & Trim" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 left-3 w-10 h-10 rounded-xl bg-plum-600/90 premium-blur flex items-center justify-center text-lg shadow-md text-white">💅</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-2">
+                                <h3 class="font-serif text-xl font-bold text-plum-950 leading-tight">Women's Styling & Blowouts</h3>
+                                <span class="font-bold text-plum-600 text-sm whitespace-nowrap">Consult</span>
+                            </div>
+                            <p class="mt-3 text-slate-600 text-sm leading-relaxed">Personalized haircuts, volumetric bouncy blowouts, hot-tool styling sessions, and targeted conditioning treatments for breathtaking hair bounce.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="pt-4 border-t border-dashed border-champagne-200 flex items-center justify-between">
+                            <span class="text-xs text-champagne-600 uppercase font-bold tracking-wider">Estimated Time: 1 hour</span>
+                            <a href="#book" class="text-xs font-bold text-plum-600 hover:text-plum-800 flex items-center gap-0.5">Book Now &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Booking Consult Teaser -->
+            <div class="mt-16 bg-gradient-dark rounded-3xl p-8 sm:p-12 text-center text-white shadow-xl relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#FAF6F0_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                <h3 class="font-serif text-2.5xl sm:text-3xl font-bold relative z-10">Unsure which color technique or Hairskeen layout fits you?</h3>
+                <p class="mt-3 text-plum-100 max-w-2xl mx-auto text-sm sm:text-base relative z-10">Book a comprehensive 1-on-1 private studio consultation. Jessi will analyze your hair texture, thickness, and style target face-to-face.</p>
+                <div class="mt-8 relative z-10">
+                    <a href="#book" class="bg-gradient-to-r from-champagne-500 to-champagne-600 hover:from-champagne-600 hover:to-champagne-500 text-plum-950 font-bold px-8 py-4 rounded-full shadow-lg transition-transform hover:-translate-y-0.5 duration-200 inline-block text-sm">
+                        Request Consultation Appointment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Gallery Section -->
+    <section id="gallery" class="py-20 sm:py-28 bg-champagne-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Details Header -->
+                <div class="lg:col-span-4">
+                    <span class="text-xs uppercase tracking-[0.25em] text-plum-600 font-bold">The Chair Transformations</span>
+                    <h2 class="font-serif text-3.5xl sm:text-4xl lg:text-4xl font-bold text-plum-950 mt-2">
+                        Recent Works from Jessi's Chair
+                    </h2>
+                    <p class="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Flip through actual visual proof of Jessi's skills. This includes precise premium highlights, multi-tiered balayage patterns, high-contrast mens tapers, and beautifully blended natural extensions.
+                    </p>
+                    
+                    <div class="mt-8 p-6 bg-white rounded-2xl border border-plum-100 shadow-sm">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl text-blue-600">👥</span>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">Real-time Client Feed</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">Explore our massive photo collection updated daily by Jessi directly from the shop floor.</p>
+                            </div>
+                        </div>
+                        <a href="https://www.facebook.com/jessi.tollett/photos" target="_blank" class="mt-6 w-full text-center block bg-plum-600 hover:bg-plum-700 text-white font-semibold text-xs py-3 rounded-xl shadow transition-colors">
+                            Visit Jessi's Full Facebook Photos
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Portfolio Grid utilizing image_22bb63.jpg dynamically as interactive asset -->
+                <div class="lg:col-span-8">
+                    <div class="relative bg-white p-4 sm:p-6 rounded-3xl shadow-xl border border-champagne-200">
+                        
+                        <!-- Mini Tab Switcher for original Feed vs Stock Grid -->
+                        <div class="flex justify-between items-center mb-6 flex-wrap gap-2">
+                            <div class="flex bg-champagne-50 p-1 rounded-xl border border-champagne-200">
+                                <button onclick="switchGalleryTab('feed')" id="gallery-tab-feed" class="px-4 py-2 rounded-lg font-bold text-xs transition-colors bg-plum-600 text-white shadow-sm">
+                                    🔴 Facebook Live Feed
+                                </button>
+                                <button onclick="switchGalleryTab('catalogue')" id="gallery-tab-catalogue" class="px-4 py-2 rounded-lg font-bold text-xs transition-colors text-slate-600 hover:text-plum-600">
+                                    📷 Curated Style Catalogue
+                                </button>
+                            </div>
+                            <span class="text-xs text-slate-500 font-medium">Chickasha, OK</span>
+                        </div>
+                        
+                        <!-- TAB 1: Verbatim Reference to image_22bb63.jpg with luxury display & zoom -->
+                        <div id="gallery-content-feed" class="relative overflow-hidden rounded-2xl border border-slate-100 group">
+                            <img src="image_22bb63.jpg" alt="Hair by Jessi Lynn Live Client Portfolio Grid" class="w-full h-auto transition-transform duration-700 ease-out group-hover:scale-[1.03]" onerror="this.onerror=null; this.src='https://placehold.co/800x600/993556/ffffff?text=Hair+by+Jessi+Lynn+Gallery+Grid'">
+                            
+                            <!-- Premium Hover Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-plum-950/70 via-plum-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                                <h3 class="font-serif text-white text-xl font-bold">The Transformation Grid</h3>
+                                <p class="text-plum-100 text-xs mt-1">Stellar multi-tone hair treatments, custom barber fades, and advanced styling on real people.</p>
+                                <div class="mt-4 flex gap-2">
+                                    <button onclick="openGalleryModal()" class="bg-white hover:bg-plum-100 text-plum-950 font-bold text-xs px-4 py-2 rounded-full transition-colors">
+                                        🔍 Inspect Full Size
+                                    </button>
+                                    <a href="https://www.facebook.com/jessi.tollett/photos" target="_blank" class="bg-plum-600 hover:bg-plum-700 text-white font-bold text-xs px-4 py-2 rounded-full transition-colors">
+                                        Visit Original Post &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TAB 2: Curated High-Quality Photographic Catalogue of modern styles & barber detail -->
+                        <div id="gallery-content-catalogue" class="hidden grid grid-cols-2 gap-4">
+                            <!-- Style 1 -->
+                            <div class="relative overflow-hidden rounded-xl border border-slate-100 group aspect-square">
+                                <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=600&q=80" alt="Precision Sharp Fade Haircut" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                                    <span class="text-white font-bold text-xs font-serif">Precision Mid-Fade Cut</span>
+                                    <span class="text-champagne-500 text-[10px] uppercase font-semibold">Grooming & Edge detailing</span>
+                                </div>
+                            </div>
+                            <!-- Style 2 -->
+                            <div class="relative overflow-hidden rounded-xl border border-slate-100 group aspect-square">
+                                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&q=80" alt="Elegant Balayage Hair Highlights" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                                    <span class="text-white font-bold text-xs font-serif">Sun-Kissed Balayage</span>
+                                    <span class="text-champagne-500 text-[10px] uppercase font-semibold">Artistic Multi-Tone Color</span>
+                                </div>
+                            </div>
+                            <!-- Style 3 -->
+                            <div class="relative overflow-hidden rounded-xl border border-slate-100 group aspect-square">
+                                <img src="https://images.unsplash.com/photo-1599351431247-f509408793cd?auto=format&fit=crop&w=600&q=80" alt="Hot Shave Razor Beard Detailing" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                                    <span class="text-white font-bold text-xs font-serif">Traditional Straight-Razor Edge</span>
+                                    <span class="text-champagne-500 text-[10px] uppercase font-semibold">Hot towel facial grooming</span>
+                                </div>
+                            </div>
+                            <!-- Style 4 -->
+                            <div class="relative overflow-hidden rounded-xl border border-slate-100 group aspect-square">
+                                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Volume Hair Extensions Transformation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                                    <span class="text-white font-bold text-xs font-serif">Premium Volumetric Strands</span>
+                                    <span class="text-champagne-500 text-[10px] uppercase font-semibold">Fusions & Seamless Extensions</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Gallery Captions / Quick Stats -->
+                        <div class="mt-4 flex flex-wrap justify-between items-center text-xs text-slate-500 font-medium px-2">
+                            <span>📷 High-End Client Selfies & In-chair Reveals</span>
+                            <span class="text-plum-600 font-bold">Est. Style Lounge</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials Section -->
+    <section id="reviews" class="py-20 sm:py-28 bg-white border-b border-champagne-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-[0.2em] text-plum-600 font-bold">Client Praises</span>
+                <h2 class="font-serif text-3.5xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mt-2">What Clients Say</h2>
+                <p class="mt-3 text-slate-600 text-sm sm:text-base">Experience direct feedback from local Chickasha men and women who have trusted Jessi with their styling dreams.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review Card 1 -->
+                <div class="bg-champagne-50 rounded-2xl p-8 border border-champagne-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <!-- Stars -->
+                        <div class="flex items-center gap-1 text-amber-400 text-lg mb-4">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="text-slate-600 italic text-sm sm:text-base leading-relaxed">
+                            "Jessi is absolute magic with shears and color! She knew exactly what highlight combination would lift my natural tones. I literally walk out of J Danielle Salon feeling like a brand new person every single time. Absolutely unmatched!"
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-dashed border-champagne-200 flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">Sarah M.</h4>
+                            <p class="text-[11px] text-slate-400 uppercase tracking-widest font-semibold mt-0.5">Balayage & Styling Client</p>
+                        </div>
+                        <span class="text-xs bg-plum-50 text-plum-700 px-3 py-1 rounded-full font-bold">Verified Review</span>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="bg-champagne-50 rounded-2xl p-8 border border-champagne-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <!-- Stars -->
+                        <div class="flex items-center gap-1 text-amber-400 text-lg mb-4">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="text-slate-600 italic text-sm sm:text-base leading-relaxed">
+                            "Without a doubt, Jessi is the premium barber in Chickasha. Her straight razor hot-towel shave is more than just a shave; it is a full luxury spa treatment. My skin feels clean, hydrated, and perfect. If you haven't booked this shave, you are seriously missing out."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-dashed border-champagne-200 flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">Mike T.</h4>
+                            <p class="text-[11px] text-slate-400 uppercase tracking-widest font-semibold mt-0.5">Barber & Shave Regular</p>
+                        </div>
+                        <span class="text-xs bg-plum-50 text-plum-700 px-3 py-1 rounded-full font-bold">Verified Review</span>
+                    </div>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="bg-champagne-50 rounded-2xl p-8 border border-champagne-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <!-- Stars -->
+                        <div class="flex items-center gap-1 text-amber-400 text-lg mb-4">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="text-slate-600 italic text-sm sm:text-base leading-relaxed">
+                            "I had reached out to Jessi to inquire about custom extensions for volume. She was so incredibly attentive, explained the entire process thoroughly during our consultation, and crafted a design that blends flawlessly. My confidence is through the roof!"
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-dashed border-champagne-200 flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">Ashley R.</h4>
+                            <p class="text-[11px] text-slate-400 uppercase tracking-widest font-semibold mt-0.5">Extensions & volume Client</p>
+                        </div>
+                        <span class="text-xs bg-plum-50 text-plum-700 px-3 py-1 rounded-full font-bold">Verified Review</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking & Contact Section -->
+    <section id="book" class="py-20 sm:py-28 bg-champagne-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 sm:gap-16 items-start">
+                
+                <!-- Left Details: Business Information -->
+                <div id="contact" class="lg:col-span-5 space-y-8 lg:sticky lg:top-28">
+                    <div>
+                        <span class="text-xs uppercase tracking-[0.25em] text-plum-600 font-bold">Contact Studio</span>
+                        <h2 class="font-serif text-3.5xl sm:text-4xl font-bold text-plum-950 mt-1">Get in Touch</h2>
+                        <p class="mt-4 text-slate-600 leading-relaxed text-sm sm:text-base">
+                            Jessi works inside the gorgeous, private **J Danielle Salon & Color Studio** in Chickasha. Please request your slot below or text directly for emergency styling openings.
+                        </p>
+                    </div>
+
+                    <!-- Contact details -->
+                    <div class="space-y-6">
+                        <!-- Location -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-plum-50 border border-plum-100 flex items-center justify-center text-plum-600 shadow-sm shrink-0 mt-0.5">
+                                📍
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">Salon Location</h4>
+                                <p class="text-sm text-slate-500 leading-relaxed mt-1">
+                                    J Danielle Salon & Color Studio<br>
+                                    2721 Ponderosa Dr, Chickasha, OK 73018
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-plum-50 border border-plum-100 flex items-center justify-center text-plum-600 shadow-sm shrink-0 mt-0.5">
+                                📞
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">Phone / Text</h4>
+                                <p class="text-sm text-slate-500 mt-1">
+                                    <a href="tel:+15803725411" class="text-plum-600 hover:text-plum-700 font-bold transition-colors">
+                                        +1 (580) 372-5411
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Hours -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-plum-50 border border-plum-100 flex items-center justify-center text-plum-600 shadow-sm shrink-0 mt-0.5">
+                                🕒
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">Working Hours</h4>
+                                <p class="text-sm text-slate-500 mt-1 leading-relaxed">
+                                    <strong>Tue - Sat:</strong> 9:00 AM - 6:00 PM <br>
+                                    <strong>Sun - Mon:</strong> Closed
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Beautiful interactive simulated map widget -->
+                    <div class="bg-white p-4 rounded-2xl border border-champagne-200 shadow-md">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs uppercase tracking-wider font-bold text-slate-400">Chickasha, Oklahoma Salon Area</span>
+                            <span class="w-2.5 h-2.5 bg-green-500 rounded-full animate-ping"></span>
+                        </div>
+                        <div class="relative bg-plum-50 rounded-xl h-48 overflow-hidden flex items-center justify-center border border-dashed border-plum-200">
+                            <!-- Abstract layout graphic represent OKC location -->
+                            <div class="absolute inset-0 bg-[radial-gradient(#993556_1px,transparent_1px)] [background-size:24px_24px] opacity-10"></div>
+                            <div class="text-center p-4">
+                                <span class="text-4xl">💈</span>
+                                <h4 class="font-serif font-bold text-plum-950 mt-2 text-sm">J Danielle Salon & Color Studio</h4>
+                                <p class="text-xs text-slate-500 mt-1">Located directly off US-62 (Grand Ave) Near Ponderosa Dr</p>
+                                <a href="https://maps.google.com/?q=2721+Ponderosa+Dr,+Chickasha,+OK+73018" target="_blank" class="mt-4 inline-block bg-white hover:bg-plum-50 border border-plum-200 text-plum-700 font-semibold text-xs px-4 py-2 rounded-lg shadow-sm transition-colors">
+                                    Open Google Maps
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Details: Request Booking Form with Custom Interactive UI elements -->
+                <div class="lg:col-span-7 bg-white p-6 sm:p-10 rounded-3xl shadow-xl border border-champagne-200">
+                    <span class="text-xs uppercase tracking-wider text-plum-600 font-bold">1-Minute Booking Process</span>
+                    <h3 class="font-serif text-2.5xl sm:text-3xl font-bold text-slate-900 mt-1">Request Your Session</h3>
+                    <p class="mt-2 text-slate-500 text-sm">Please fill out this form to query Jessi's availability. Jessi Lynn will text or call you shortly to secure your exact time slot.</p>
+
+                    <form id="bookingForm" onsubmit="handleFormSubmit(event)" class="mt-8 space-y-6">
+                        <!-- Name Row -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">First Name</label>
+                                <input type="text" id="firstName" required placeholder="e.g. Michael" class="w-full px-4 py-3 rounded-xl border border-champagne-200 bg-champagne-50/50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-plum-500 focus:bg-white text-sm transition-all duration-150">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Last Name</label>
+                                <input type="text" id="lastName" required placeholder="e.g. Rushing" class="w-full px-4 py-3 rounded-xl border border-champagne-200 bg-champagne-50/50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-plum-500 focus:bg-white text-sm transition-all duration-150">
+                            </div>
+                        </div>
+
+                        <!-- Phone Details -->
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Mobile Phone (For confirmations)</label>
+                            <input type="tel" id="phoneNumber" required placeholder="e.g. (580) 555-0199" class="w-full px-4 py-3 rounded-xl border border-champagne-200 bg-champagne-50/50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-plum-500 focus:bg-white text-sm transition-all duration-150">
+                        </div>
+
+                        <!-- Service Select & Preferred Date -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Choose Service Specialty</label>
+                                <select id="serviceType" required class="w-full px-4 py-3 rounded-xl border border-champagne-200 bg-champagne-50/50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-plum-500 focus:bg-white text-sm transition-all duration-150">
+                                    <option value="">Select service...</option>
+                                    <option value="Men's haircut">Men's Precision Haircut</option>
+                                    <option value="Traditional Hot towel Straight Razor shave">Traditional Hot Towel Razor Shave</option>
+                                    <option value="Color & highlights">Multi-tone Color & Highlights</option>
+                                    <option value="Hairskeen Hair replacement">Hairskeen Restoration System</option>
+                                    <option value="Hair Extensions">Custom Volume Extensions</option>
+                                    <option value="Women's Styling / blowout">Women's Styling / Blowouts</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Target Date & Day</label>
+                                <input type="date" id="targetDate" required class="w-full px-4 py-3 rounded-xl border border-champagne-200 bg-champagne-50/50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-plum-500 focus:bg-white text-sm transition-all duration-150">
+                            </div>
+                        </div>
+
+                        <!-- Notes Area -->
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Styling Ideas or Special Requests</label>
+                            <textarea id="notes" placeholder="Tell Jessi about your styling goal (e.g. 'I want a high bald skin fade' or 'I need help covering thinning areas with Hairskeen')..." class="w-full h-28 px-4 py-3 rounded-xl border border-champagne-200 bg-champagne-50/50 text-slate-800 focus:outline-none focus:ring-2 focus:ring-plum-500 focus:bg-white text-sm transition-all duration-150 resize-none"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="pt-2">
+                            <button type="submit" class="w-full bg-gradient-to-r from-plum-600 to-plum-700 hover:from-plum-700 hover:to-plum-900 text-white font-bold text-base py-4 px-8 rounded-full shadow-lg transition-transform hover:-translate-y-0.5 duration-200 focus:outline-none focus:ring-2 focus:ring-plum-500">
+                                Request Booking Slots Now
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Footer -->
+    <footer class="bg-plum-950 text-plum-100 py-16 border-t-2 border-champagne-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
+                
+                <!-- Brand details column -->
+                <div class="md:col-span-5 space-y-4">
+                    <span class="font-serif text-3xl font-bold tracking-tight text-white block">
+                        Hair by <span class="text-champagne-500 italic">Jessi Lynn</span>
+                    </span>
+                    <p class="text-sm text-plum-200 max-w-sm leading-relaxed">
+                        Licensed Barber, master color artist, and certified hair replacement technician. Elevating salon and shop craftsmanship inside Chickasha's J Danielle Salon.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <!-- Facebook Icon Link -->
+                        <a href="https://www.facebook.com/jessi.tollett" target="_blank" class="w-8 h-8 rounded-full bg-plum-900 border border-plum-800 hover:bg-plum-800 text-champagne-500 flex items-center justify-center transition-colors">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                        </a>
+                        <!-- Phone Quick Link -->
+                        <a href="tel:+15803725411" class="w-8 h-8 rounded-full bg-plum-900 border border-plum-800 hover:bg-plum-800 text-champagne-500 flex items-center justify-center transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Studio Address details column -->
+                <div class="md:col-span-4 space-y-4">
+                    <h4 class="text-sm uppercase tracking-widest text-white font-bold">Studio Location</h4>
+                    <p class="text-sm text-plum-200 leading-relaxed">
+                        J Danielle Salon & Color Studio<br>
+                        2721 Ponderosa Dr, Chickasha, OK 73018<br>
+                        <span class="block mt-2 font-bold text-champagne-500">📞 Call: (580) 372-5411</span>
+                    </p>
+                </div>
+
+                <!-- Navigation Quick links -->
+                <div class="md:col-span-3 space-y-4">
+                    <h4 class="text-sm uppercase tracking-widest text-white font-bold">Quick Navigation</h4>
+                    <ul class="space-y-2 text-sm text-plum-200">
+                        <li><a href="#about" class="hover:text-champagne-500 transition-colors">About Jessi</a></li>
+                        <li><a href="#services" class="hover:text-champagne-500 transition-colors">Services Menu</a></li>
+                        <li><a href="#gallery" class="hover:text-champagne-500 transition-colors">Transformation Grid</a></li>
+                        <li><a href="#reviews" class="hover:text-champagne-500 transition-colors">Client Reviews</a></li>
+                        <li><a href="#book" class="hover:text-champagne-500 transition-colors">Booking Portal</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Legals Copyright -->
+            <div class="mt-12 pt-8 border-t border-plum-900 text-center text-xs text-plum-400">
+                <p>&copy; 2026 Hair by Jessi Lynn. Hosted & curated for J Danielle Salon. All rights reserved.</p>
+                <p class="mt-1">Hairskeen is a registered trademark of Hairskeen USA. Wade Gordon is a certified academy of excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CUSTOM INTERACTIVE MODALS (Replaces alert() completely per instructions) -->
+    
+    <!-- Success Booking Confirmation Modal -->
+    <div id="successModal" class="hidden fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <!-- Background overlay -->
+            <div class="fixed inset-0 bg-plum-950/80 transition-opacity" aria-hidden="true" onclick="closeModal()"></div>
+            <!-- Center modal elements -->
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+            <div class="inline-block align-bottom bg-white rounded-3xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full border border-champagne-200">
+                <div class="bg-white px-6 pt-8 pb-6 sm:p-8 relative">
+                    <!-- Confetti background shapes -->
+                    <div class="absolute top-4 right-4 text-3xl opacity-30 select-none animate-bounce">✨🎉</div>
+                    
+                    <div class="sm:flex sm:items-start">
+                        <div class="mx-auto flex-shrink-0 flex items-center justify-center h-14 w-14 rounded-full bg-green-50 border-2 border-green-200 text-green-500 sm:mx-0 sm:h-12 sm:w-12 text-2xl">
+                            ✓
+                        </div>
+                        <div class="mt-4 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                            <h3 class="font-serif text-2xl font-bold text-plum-950" id="modal-title">
+                                Appointment Requested!
+                            </h3>
+                            <p class="text-sm text-slate-500 mt-2">
+                                Thank you, <span id="modalClientName" class="font-bold text-plum-900">Guest</span>. Jessi has received your request and will reach out shortly to lock in your final time.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Details Box -->
+                    <div class="mt-6 bg-champagne-50 border border-champagne-200 p-5 rounded-2xl">
+                        <h4 class="text-xs uppercase font-bold text-champagne-600 tracking-wider mb-3">Booking Query Receipt</h4>
+                        <div class="space-y-2 text-sm text-slate-700">
+                            <p><strong>Service Requested:</strong> <span id="modalService">Not Selected</span></p>
+                            <p><strong>Preferred Date:</strong> <span id="modalDate">No Date Provided</span></p>
+                            <p><strong>Contact Phone:</strong> <span id="modalPhone">No Phone</span></p>
+                            <p id="modalNotesWrapper" class="text-xs text-slate-500 italic mt-3 pt-2 border-t border-dashed border-champagne-200">
+                                &ldquo;<span id="modalNotes">No notes</span>&rdquo;
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Close/Call actions -->
+                    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                        <button onclick="closeModal()" type="button" class="w-full text-center bg-plum-600 hover:bg-plum-700 text-white font-bold text-sm px-6 py-3.5 rounded-xl transition-colors">
+                            Awesome, Got It!
+                        </button>
+                        <a href="tel:+15803725411" class="w-full text-center bg-champagne-100 hover:bg-champagne-200 text-plum-800 font-bold text-sm px-6 py-3.5 rounded-xl flex items-center justify-center gap-1.5 transition-colors">
+                            📞 Immediate Call
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Gallery Spotlight Inspection Modal -->
+    <div id="galleryModal" class="hidden fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex items-center justify-center min-h-screen px-4 text-center sm:p-0">
+            <!-- Background overlay -->
+            <div class="fixed inset-0 bg-plum-950/90 transition-opacity" aria-hidden="true" onclick="closeGalleryModal()"></div>
+            <!-- Center elements -->
+            <div class="inline-block bg-white rounded-3xl overflow-hidden shadow-2xl transform transition-all max-w-3xl w-full border border-champagne-200 p-4 sm:p-6 relative z-10">
+                <button onclick="closeGalleryModal()" class="absolute top-4 right-4 bg-plum-900 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg hover:bg-plum-800 transition-colors z-20">
+                    ✕
+                </button>
+                <div class="relative overflow-hidden rounded-2xl">
+                    <img src="image_22bb63.jpg" alt="Transformations Showcase Inspect" class="w-full h-auto">
+                </div>
+                <div class="mt-4 text-left px-2">
+                    <h3 class="font-serif text-lg font-bold text-plum-950">Chair Transformations Showcase</h3>
+                    <p class="text-xs text-slate-500 mt-1">Snapshot representing actual hair styling sessions, highlighting rich color gradients, clean transitions, scalp-blended non-surgical replacements, and custom hair extensions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Client Scripts & Tab Managers -->
+    <script>
+        // DOM Elements
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        // Mobile Menu Toggle
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                // Return Hamburger Icon
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            } else {
+                // Turn into X Close Icon
+                menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
+        });
+
+        // Close mobile menu on choosing section links
+        const navLinks = mobileMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            });
+        });
+
+        // Interactive Gallery Switcher
+        function switchGalleryTab(tabName) {
+            const feedTab = document.getElementById('gallery-tab-feed');
+            const catalogueTab = document.getElementById('gallery-tab-catalogue');
+            const feedContent = document.getElementById('gallery-content-feed');
+            const catalogueContent = document.getElementById('gallery-content-catalogue');
+
+            if (tabName === 'feed') {
+                feedTab.className = "px-4 py-2 rounded-lg font-bold text-xs transition-colors bg-plum-600 text-white shadow-sm";
+                catalogueTab.className = "px-4 py-2 rounded-lg font-bold text-xs transition-colors text-slate-600 hover:text-plum-600";
+                feedContent.classList.remove('hidden');
+                catalogueContent.classList.add('hidden');
+            } else {
+                catalogueTab.className = "px-4 py-2 rounded-lg font-bold text-xs transition-colors bg-plum-600 text-white shadow-sm";
+                feedTab.className = "px-4 py-2 rounded-lg font-bold text-xs transition-colors text-slate-600 hover:text-plum-600";
+                catalogueContent.classList.remove('hidden');
+                catalogueContent.classList.add('hidden');
+                catalogueContent.className = "grid grid-cols-2 gap-4"; // Ensure grid classes stay correct
+                feedContent.classList.add('hidden');
+            }
+        }
+
+        // Interactive Menu Category Filtering System
+        function filterServices(category) {
+            // Update active state in buttons
+            const buttons = document.querySelectorAll('.service-tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-plum-600', 'text-white', 'shadow-sm');
+                btn.classList.add('text-slate-600', 'hover:text-plum-600');
+            });
+
+            const activeBtn = document.getElementById('tab-' + category);
+            activeBtn.classList.remove('text-slate-600', 'hover:text-plum-600');
+            activeBtn.classList.add('bg-plum-600', 'text-white', 'shadow-sm');
+
+            // Show / Hide matching service cards
+            const cards = document.querySelectorAll('.service-card-item');
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.classList.remove('hidden');
+                } else if (card.classList.contains(category)) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        // Custom modal controls (Replaces browser alert completely)
+        function openModal(data) {
+            document.getElementById('modalClientName').textContent = data.clientName;
+            document.getElementById('modalService').textContent = data.service;
+            document.getElementById('modalDate').textContent = data.date;
+            document.getElementById('modalPhone').textContent = data.phone;
+            
+            if (data.notes && data.notes.trim() !== "") {
+                document.getElementById('modalNotesWrapper').classList.remove('hidden');
+                document.getElementById('modalNotes').textContent = data.notes;
+            } else {
+                document.getElementById('modalNotesWrapper').classList.add('hidden');
+            }
+
+            document.getElementById('successModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Stop background scrolling
+        }
+
+        function closeModal() {
+            document.getElementById('successModal').classList.add('hidden');
+            document.body.style.overflow = ''; // Resume background scrolling
+        }
+
+        // Gallery Modal Controls
+        function openGalleryModal() {
+            document.getElementById('galleryModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGalleryModal() {
+            document.getElementById('galleryModal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // Booking Form Submit Handler
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Stop standard redirect/refresh
+            
+            // Extract input values
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const phone = document.getElementById('phoneNumber').value;
+            const service = document.getElementById('serviceType').value;
+            const targetDate = document.getElementById('targetDate').value;
+            const notes = document.getElementById('notes').value;
+
+            const clientData = {
+                clientName: `${firstName} ${lastName}`,
+                phone: phone,
+                service: service,
+                date: targetDate,
+                notes: notes
+            };
+
+            // Launch beautiful customized check confirmation modal
+            openModal(clientData);
+
+            // Clean form inputs completely
+            document.getElementById('bookingForm').reset();
+        }
+
+        // Smooth scroll listener for smooth behavior anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId !== '#') {
+                    e.preventDefault();
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
